@@ -21,7 +21,7 @@ const Navicons: React.FC<NavbarProps> = ({ openMenu, setOpenMenu }) => {
     <nav
       className={
         openMenu
-          ? "flex flex-col items-end absolute right-0 top-16 gap-2 z-[999] pt-8 pb-5 px-10"
+          ? "flex flex-col items-end absolute right-0 top-16 gap-2 z-50 pt-8 pb-5 px-10"
           : "flex items-center gap-8 max-md:hidden"
       }
     >

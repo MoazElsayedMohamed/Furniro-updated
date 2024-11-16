@@ -5,7 +5,7 @@ import ProductElements from "./ProductElements";
 const Products = () => {
   return (
     <section className="text-center mb-12">
-      <h2 className="text-3xl capitalize  mb-12 font-bold text-[#3A3A3A]">
+      <h2 className="text-3xl capitalize  mb-12 font-bold text-gray-900">
         our products
       </h2>
       <ProductElements PAGE_SIZE={8} />

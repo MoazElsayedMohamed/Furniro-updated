@@ -1,5 +1,5 @@
 import Product from "./Product";
-import { Skeleton } from "../ui/skeleton";
+// import { Skeleton } from "../ui/skeleton";
 import { useProducts } from "../../services/apiProducts";
 import { URL } from "../../utils/constants";
 import { Link } from "react-router-dom";
@@ -13,8 +13,7 @@ const ProductElements: React.FC<Size> = ({ PAGE_SIZE }) => {
   const { data: products, error, isLoading } = useProducts();
   const currentPage = 1;
 
-  if (isLoading)
-    return <Skeleton className="w-[100px] h-[20px] rounded-full" />;
+  if (isLoading) return <p>loading...</p>;
 
   if (error) return <p>Error loading Products</p>;
 

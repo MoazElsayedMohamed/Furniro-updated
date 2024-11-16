@@ -15,7 +15,7 @@ const Navbar: React.FC<NavbarProps> = ({ openMenu, setOpenMenu }) => {
       <ul
         className={
           openMenu
-            ? "absolute flex flex-col items-start gap-1 pt-8 pb-5 px-10 w-full bg-white z-[999] left-0"
+            ? "absolute flex flex-col items-start gap-1 pt-8 pb-5 px-10 w-full bg-white z-50 left-0"
             : "flex list-none items-center gap-14 cursor-pointer max-md:hidden "
         }
       >

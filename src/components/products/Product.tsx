@@ -33,8 +33,8 @@ const Product: React.FC<ProductProps> = ({
       onMouseOut={handleMouseOut}
     >
       {isHovering && (
-        <div className="absolute w-full h-full z-[999] bg-gray-opacityDark">
-          <div className="flex flex-col items-center justify-center gap-6 relative top-[11rem]">
+        <div className="absolute w-full h-full z-50 bg-gray-500">
+          <div className="flex flex-col items-center justify-center gap-6 relative top-44">
             <div>
               <button className="bg-white text-primary font-bold border-none py-3 px-14">
                 Add to cart
@@ -68,9 +68,9 @@ const Product: React.FC<ProductProps> = ({
       >
         {discount ? `-${discount}%` : "New"}
       </p>
-      <div className="text-left flex flex-col gap-4 relative bg-gray-light-1 pl-4 py-8">
+      <div className="text-left flex flex-col gap-4 relative bg-gray-50 pl-4 py-8">
         <h4 className="text-2xl font-bold">{name}</h4>
-        <p className="text-base text-gray-dark-1 font-medium">{shortDesc}</p>
+        <p className="text-base text-gray-400 font-medium">{shortDesc}</p>
         <p className="text-xl font-semibold">Rp {price}.000</p>
       </div>
     </div>

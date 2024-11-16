@@ -78,9 +78,9 @@ const Login = () => {
   return (
     <section className="relative bg-custom-image bg-cover h-2-screen ">
       <div className="flex justify-center items-center md:absolute md:top-0 md:start-0 w-full h-full">
-        <div className="bg-white rounded-xl shadow-md py-20 px-10 w-2/5 max-md:w-4/5 ">
+        <div className="bg-white rounded-xl shadow-md py-20 px-10 md:w-2/5 max-md:w-4/5 ">
           <form className="mb-32 " onSubmit={handleSubmit(onSubmit)}>
-            <h1 className="text-3xl text-[#333333] mb-12 ">Sign in</h1>
+            <h1 className="text-3xl text-gray-600 mb-12 ">Sign in</h1>
             <div className="mb-4">
               <FormRow
                 id="identifier"
@@ -90,7 +90,7 @@ const Login = () => {
                   throw new Error("Function not implemented.");
                 }}
                 showPassword={false}
-                placeholder="test@test.com"
+                placeholder="Email Address or Username"
                 inputName="email"
                 minLength={0}
                 register={register}
@@ -107,7 +107,7 @@ const Login = () => {
                 onClick={handleClick}
                 showPassword={showPassword}
                 inputName="password"
-                placeholder="password"
+                placeholder="Password"
                 minLength={0}
                 register={register}
               />
@@ -115,10 +115,10 @@ const Login = () => {
                 <p className="text-red-500">{errors.password.message}</p>
               )}
             </div>
-            <div className="mt-8 max-phone2:mt-3">
+            <div className="mt-8">
               <Button size="lg">sign in</Button>
             </div>
-            <div className="flex justify-between mt-4 font-normal text-[#333333]">
+            <div className="flex justify-between mt-4 font-normal text-gray-600">
               <div
                 className="flex items-center gap-2 cursor-pointer "
                 onClick={() => setChecked(!checked)}
@@ -133,7 +133,7 @@ const Login = () => {
               <Link to="#">Need Help?</Link>
             </div>
           </form>
-          <p className=" text-[#666666]">
+          <p className=" text-gray-300">
             Don&apos;t have an account?
             <span className="ml-1">
               <Link className="underline text-black" to="/register">
@@ -141,7 +141,7 @@ const Login = () => {
               </Link>
             </span>
           </p>
-          <p className=" text-[#666666] mt-2">
+          <p className=" text-gray-300 mt-2">
             This page is protected by Google reCAPTCHA to ensure you&apos;re not
             a bot.
             <Link className="text-black" to="#">

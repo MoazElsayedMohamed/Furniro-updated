@@ -28,10 +28,10 @@ const buttonVariants = cva(
       size: {
         default: "h-9 px-4 py-2 text-4xl",
         xs: "h-4 rounded-md px-2 py-3 text-sm",
-        sm: "h-8 rounded-md px-4 py-6  text-md w-auto sm:max-xl:h-4 sm:max-xl:px-3 sm:max-xl:py-4",
+        sm: "h-8 rounded-md px-4 py-6 text-base w-auto ",
         base: "text-lg",
         md: "h-10 rounded-md text-2xl",
-        lg: "font-normal text-lg py-2 max-tablet:text-base max-tablet:py-1",
+        lg: "font-normal text-lg py-2",
         cardSize: "",
         icon: "h-9 w-9",
       },
