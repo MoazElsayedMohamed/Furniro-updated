@@ -135,11 +135,9 @@ const Login = () => {
           </form>
           <p className=" text-gray-300">
             Don&apos;t have an account?
-            <span className="ml-1">
-              <Link className="underline text-black" to="/register">
-                Sign up
-              </Link>
-            </span>
+            <Link className="underline text-black ml-1" to="/register">
+              Sign up
+            </Link>
           </p>
           <p className=" text-gray-300 mt-2">
             This page is protected by Google reCAPTCHA to ensure you&apos;re not
