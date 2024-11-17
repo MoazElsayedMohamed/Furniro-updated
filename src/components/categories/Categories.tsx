@@ -2,7 +2,6 @@
 import Category from "./Category";
 import { useCategories } from "../../services/apiCategories";
 import { URL } from "../../utils/constants";
-// import { Skeleton } from "../ui/skeleton";
 
 const Categories = () => {
   const { data: categories, error, isLoading } = useCategories();

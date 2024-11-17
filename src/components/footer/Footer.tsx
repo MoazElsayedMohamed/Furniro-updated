@@ -74,7 +74,7 @@ const Footer = () => {
               Newsletter
             </h4>
             <form
-              className="flex items-start gap-2 relative"
+              className="flex items-start gap-2 "
               onSubmit={handleSubmit((data) => console.log(data))}
             >
               <div>
