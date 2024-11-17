@@ -19,7 +19,7 @@ const Footer = () => {
     <footer className="border-t border-gray-700 ">
       <div className="my-12 mx-24 ">
         <div className="grid grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] gap-8 pb-12  ">
-          <div>
+          <div className="flex flex-col">
             <h3 className="text-2xl font-bold mb-6">Furniro.</h3>
             <p className="text-gray-200 font-normal w-full text-base">
               400 University Drive Suite 200 Coral Gables,
@@ -27,9 +27,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex flex-col">
-            <h4 className="text-gray font-medium text-base mb-8 max-lg:mb-6">
-              Links
-            </h4>
+            <h4 className="text-gray-200 mb-8 max-lg:mb-6">Links</h4>
             <NavLink
               to="/"
               className=" cursor-pointer capitalize  hover:text-primary lg:mb-8 max-lg:mb-5"
@@ -56,9 +54,7 @@ const Footer = () => {
             </NavLink>
           </div>
           <div>
-            <h4 className="text-gray font-medium text-base mb-8 max-lg:mb-6">
-              Help
-            </h4>
+            <h4 className="text-gray-200 mb-8 max-lg:mb-6">Help</h4>
             <p className=" cursor-pointer capitalize hover:text-primary lg:mb-8 max-lg:mb-5">
               payment options
             </p>
@@ -70,9 +66,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="w-full">
-            <h4 className="text-gray font-medium text-base mb-8 max-lg:mb-6">
-              Newsletter
-            </h4>
+            <h4 className="text-gray-200 mb-8 max-lg:mb-6">Newsletter</h4>
             <form
               className="flex items-start gap-2 "
               onSubmit={handleSubmit((data) => console.log(data))}
