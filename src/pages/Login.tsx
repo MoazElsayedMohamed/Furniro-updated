@@ -78,7 +78,7 @@ const Login = () => {
   return (
     <section className="bg-custom-image bg-cover h-full bg-center bg-no-repeat py-24 max-xs:py-12  ">
       <div className="flex justify-center items-center w-full h-full">
-        <div className="bg-white rounded-xl shadow-md lg:py-20 px-10 md:w-2/5 max-md:w-4/5 max-xs:py-10 md:py-10 md:px-6 xs:py-14  max-xs:px-5 ">
+        <div className="bg-white rounded-xl shadow-md lg:py-20 px-10 md:w-2/5 max-md:w-4/5 max-xs:py-10 2xl:w-1/3 md:py-10 md:px-6 xs:py-14  max-xs:px-5 ">
           <form
             className="mb-32 max-xs:mb-16"
             onSubmit={handleSubmit(onSubmit)}

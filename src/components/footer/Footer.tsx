@@ -17,7 +17,7 @@ const Footer = () => {
   });
   return (
     <footer className="border-t border-gray-700">
-      <div className="mt-12 max-lg:px-12 container md:mx-auto ">
+      <div className="mt-12 max-lg:px-4 container md:mx-auto ">
         <div className="border-b border-gray-100">
           <div className="grid grid-cols-[repeat(auto-fit,_minmax(220px,_auto))] gap-x-16 pb-12 max-w-full lg:justify-items-center gap-y-12">
             <div className="flex flex-col">
@@ -71,7 +71,7 @@ const Footer = () => {
             <div className="pr-16">
               <h4 className="text-gray-200 mb-8 max-lg:mb-6">Newsletter</h4>
               <form
-                className="flex gap-2 "
+                className="flex gap-2  "
                 onSubmit={handleSubmit((data) => console.log(data))}
               >
                 <div>
@@ -82,7 +82,9 @@ const Footer = () => {
                     {...register("email")}
                   />
                   {errors.email && (
-                    <p className="text-red-500 mt-2">{errors.email.message}</p>
+                    <p className="text-red-500 mt-2 text-xs">
+                      {errors.email.message}
+                    </p>
                   )}
                 </div>
                 <div>
@@ -94,7 +96,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className=" py-10  mx-24  max-md:mx-12">
+        <div className=" py-10  mx-12  max-md:mx-4">
           <p className=" font-normal">2023 furino. All rights reverved</p>
         </div>
       </div>
