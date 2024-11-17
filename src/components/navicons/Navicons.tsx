@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
 import { toast } from "sonner";
-import { SvgIcon } from "../svgIcon/SvgIcon";
+import Icon from "./Icon";
 
 interface NavbarProps {
   openMenu?: boolean;
@@ -28,35 +27,37 @@ const Navicons: React.FC<NavbarProps> = ({ openMenu, setOpenMenu }) => {
       {token && username ? (
         <p>{username}</p>
       ) : (
-        <Link
-          to="/login"
-          onClick={() => setOpenMenu(false)}
-          className={`w-full flex justify-center pb-2 ${
-            openMenu && "border-b border-gray-200"
-          }`}
-        >
-          <SvgIcon name="login" className="w-6 h-5" />
-        </Link>
+        <Icon
+          name="login"
+          route="/login"
+          openMenu={openMenu}
+          setOpenMenu={setOpenMenu}
+        />
       )}
-      <Link
-        className={`w-full flex justify-center pb-2 ${
-          openMenu && "border-b border-gray-200"
-        }`}
-        to="#"
-      >
-        <SvgIcon name="search" className="w-6 h-5" />
-      </Link>
-      <Link
-        className={`w-full flex justify-center pb-2 ${
-          openMenu && "border-b border-gray-200"
-        }`}
-        to="#"
-      >
-        <SvgIcon name="heart" className="w-6 h-5" />
-      </Link>
-      <Link to="#" className="w-full flex justify-center pb-2">
-        <SvgIcon name="shopping-cart" className="w-6 h-5" />
-      </Link>
+      <Icon
+        name="search"
+        route="#"
+        openMenu={openMenu}
+        setOpenMenu={function (): void {
+          throw new Error("Function not implemented.");
+        }}
+      />
+      <Icon
+        name="heart"
+        route="#"
+        openMenu={openMenu}
+        setOpenMenu={function (): void {
+          throw new Error("Function not implemented.");
+        }}
+      />
+      <Icon
+        name="shopping-cart"
+        route="#"
+        openMenu={openMenu}
+        setOpenMenu={function (): void {
+          throw new Error("Function not implemented.");
+        }}
+      />
       {token && (
         <button
           className="border border-primary text-primary py-2 px-4 hover:bg-primary hover:text-white "

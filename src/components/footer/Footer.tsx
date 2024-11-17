@@ -1,7 +1,9 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
-import { NavLink } from "react-router-dom";
 import * as yup from "yup";
+import { Help, links } from "../../services/links";
+import FooterLinks from "./FooterLinks";
+import { Link } from "react-router-dom";
 
 const schema = yup.object().shape({
   email: yup.string().email("invalid email").required("email is required"),
@@ -21,7 +23,9 @@ const Footer = () => {
         <div className="border-b border-gray-100">
           <div className="grid grid-cols-[repeat(auto-fit,_minmax(220px,_auto))] gap-x-16 pb-12 max-w-full lg:justify-items-center gap-y-12">
             <div className="flex flex-col">
-              <h3 className="text-2xl font-bold mb-6">Furniro.</h3>
+              <Link to="/" className="text-2xl font-bold mb-6">
+                Furniro.
+              </Link>
               <p className="text-gray-200 font-normal w-full">
                 400 University Drive Suite 200 Coral Gables,
                 <span className="block">FL 33134 USA</span>
@@ -30,43 +34,16 @@ const Footer = () => {
             <div className="w-1/2">
               <div className="flex flex-col ">
                 <h4 className="text-gray-200 mb-8 max-lg:mb-6">Links</h4>
-                <NavLink
-                  to="/"
-                  className=" cursor-pointer capitalize hover:text-primary lg:mb-8 max-lg:mb-5"
-                >
-                  home
-                </NavLink>
-                <NavLink
-                  to="/shop"
-                  className=" cursor-pointer capitalize hover:text-primary lg:mb-8 max-lg:mb-5"
-                >
-                  shop
-                </NavLink>
-                <NavLink
-                  to="#"
-                  className="cursor-pointer capitalize hover:text-primary lg:mb-8 max-lg:mb-5"
-                >
-                  about
-                </NavLink>
-                <NavLink
-                  className="cursor-pointer capitalize hover:text-primary lg:mb-8 max-lg:mb-5"
-                  to="/contact"
-                >
-                  contact
-                </NavLink>
+                {links?.data.map((link) => {
+                  return <FooterLinks name={link.name} route={link.route} />;
+                })}
               </div>
             </div>
-            <div>
+            <div className="flex flex-col">
               <h4 className="text-gray-200 mb-8 max-lg:mb-6">Help</h4>
-              <p className=" cursor-pointer capitalize hover:text-primary lg:mb-8 max-lg:mb-5">
-                payment options
-              </p>
-              <p className="cursor-pointer capitalize hover:text-primary lg:mb-8 max-lg:mb-5">
-                returns
-              </p>
-              <p className="cursor-pointer capitalize hover:text-primary lg:mb-8 max-lg:mb-5">
-                privacy policies
-              </p>
+              {Help?.data.map((one) => {
+                return <FooterLinks name={one.name} route={one.route} />;
+              })}
             </div>
             <div className="pr-16">
               <h4 className="text-gray-200 mb-8 max-lg:mb-6">Newsletter</h4>

@@ -21,7 +21,7 @@ const Categories = () => {
 
   return (
     <section className="my-14 lg:mb-28 max-lg:mb-28 text-center px-8 container ">
-      <h3 className="text-3xl uppercase font-bold mb-4 text-gray-600">
+      <h3 className="text-3xl capitalize font-bold mb-4 text-gray-600">
         browse the range
       </h3>
       <p className="text-xl mb-12 text-gray-300 font-normal">

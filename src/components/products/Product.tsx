@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { SvgIcon } from "../svgIcon/SvgIcon";
+import ProductIcon from "./ProductIcon";
 
 interface ProductProps {
   imageUrl: string;
   name: string;
   price: number | string;
-  discount: number | null;
+  discount: number | string;
   shortDesc: string;
 }
 
@@ -40,19 +40,10 @@ const Product: React.FC<ProductProps> = ({
                 Add to cart
               </button>
             </div>
-            <div className="flex items-center justify-center gap-4 text-white   ">
-              <div className="flex gap-1 items-center">
-                <SvgIcon name="share" className="w-6 h-5" />
-                <p className="capitalize font-semibold">share</p>
-              </div>
-              <div className="flex gap-1 items-center">
-                <SvgIcon name="compare" className="w-6 h-5" />
-                <p className="capitalize font-semibold">compare</p>
-              </div>
-              <div className="flex gap-1 items-center">
-                <SvgIcon name="like" className="w-6 h-5" />
-                <p className="capitalize font-semibold">like</p>
-              </div>
+            <div className="flex items-center justify-center gap-2 text-white   ">
+              <ProductIcon name="share" />
+              <ProductIcon name="compare" />
+              <ProductIcon name="like" />
             </div>
           </div>
         </div>
@@ -60,11 +51,8 @@ const Product: React.FC<ProductProps> = ({
 
       <img src={imageUrl} alt={name} className=" h-full w-full" />
       <p
-        className={
-          discount
-            ? "absolute top-6 right-2 bg-red-50  text-white rounded-full px-2 py-4"
-            : " absolute top-6 right-2 rounded-full text-white px-3 py-4 bg-blue-200"
-        }
+        className={`absolute top-6 right-2 text-white rounded-full py-4
+          ${discount ? " bg-red-50 px-2 " : " px-3 bg-blue-200"}`}
       >
         {discount ? `-${discount}%` : "New"}
       </p>

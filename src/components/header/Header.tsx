@@ -10,7 +10,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 0); // Trigger the scrolled state
+      setScrolled(window.scrollY > 0);
       setOpenMenu(false);
     };
 

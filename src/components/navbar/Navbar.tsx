@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
+import NavTag from "./NavTag";
 
 interface NavbarProps {
   openMenu?: boolean;
@@ -19,52 +19,30 @@ const Navbar: React.FC<NavbarProps> = ({ openMenu, setOpenMenu }) => {
             : "flex list-none items-center gap-14 cursor-pointer max-md:hidden relative "
         }
       >
-        <li
-          className={`w-full flex justify-center pb-1 ${
-            openMenu && "border-b border-gray-200"
-          }`}
-        >
-          <NavLink
-            to="/"
-            className="hover:text-primary"
-            onClick={() => setOpenMenu(false)}
-          >
-            Home
-          </NavLink>
-        </li>
-        <li
-          className={`w-full flex justify-center pb-1 ${
-            openMenu && "border-b border-gray-200"
-          }`}
-        >
-          <NavLink
-            to="/shop"
-            className="hover:text-primary"
-            onClick={() => setOpenMenu(false)}
-          >
-            Shop
-          </NavLink>
-        </li>
-        <li
-          className={`w-full flex justify-center pb-1 hover:text-primary ${
-            openMenu && "border-b border-gray-200"
-          }`}
-        >
-          About
-        </li>
-        <li
-          className={`w-full flex justify-center pb-1 ${
-            openMenu && "border-b border-gray-200"
-          }`}
-        >
-          <NavLink
-            to="/contact"
-            className="hover:text-primary"
-            onClick={() => setOpenMenu(false)}
-          >
-            Contact
-          </NavLink>
-        </li>
+        <NavTag
+          name="Home"
+          openMenu={openMenu}
+          setOpenMenu={setOpenMenu}
+          route="/"
+        />
+        <NavTag
+          name="Shop"
+          openMenu={openMenu}
+          setOpenMenu={setOpenMenu}
+          route="/shop"
+        />
+        <NavTag
+          name="About"
+          openMenu={openMenu}
+          setOpenMenu={setOpenMenu}
+          route="#"
+        />
+        <NavTag
+          name="Contact"
+          openMenu={openMenu}
+          setOpenMenu={setOpenMenu}
+          route="/contact"
+        />
       </ul>
     </nav>
   );

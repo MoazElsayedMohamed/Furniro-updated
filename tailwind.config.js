@@ -13,18 +13,12 @@ export default {
     backgroundImage: {
       "custom-image": "url('/public/hero.webp')",
     },
-    screenHeight: {
-      "2vh": "150vh",
-    },
     extend: {
       container: {
         center: true,
         screens: {
           lg: "1200px",
         },
-      },
-      height: {
-        "2-screen": "150vh",
       },
       colors: {
         primary: {
