@@ -49,7 +49,7 @@ const FormRow: React.FC<FormProps> = ({
       <input
         type={type}
         id={id}
-        className="block h-16 border border-gray-800 w-full rounded-xl outline-none p-4"
+        className="block h-16 border border-gray-800 w-full rounded-xl outline-none p-4 placeholder:text-sm max-xs:placeholder:text-xs"
         placeholder={placeholder}
         {...register(inputName)}
       />

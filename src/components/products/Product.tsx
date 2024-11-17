@@ -4,8 +4,8 @@ import { SvgIcon } from "../svgIcon/SvgIcon";
 interface ProductProps {
   imageUrl: string;
   name: string;
-  price: number;
-  discount: number;
+  price: number | string;
+  discount: number | null;
   shortDesc: string;
 }
 
@@ -58,7 +58,7 @@ const Product: React.FC<ProductProps> = ({
         </div>
       )}
 
-      <img src={imageUrl} alt={name} className=" h-80 w-full" />
+      <img src={imageUrl} alt={name} className=" h-full w-full" />
       <p
         className={
           discount
@@ -68,10 +68,10 @@ const Product: React.FC<ProductProps> = ({
       >
         {discount ? `-${discount}%` : "New"}
       </p>
-      <div className="text-left flex flex-col gap-4 relative bg-gray-50 pl-4 py-8">
+      <div className="text-left flex flex-col gap-4  bg-gray-50 pl-4 py-4">
         <h4 className="text-2xl font-bold">{name}</h4>
-        <p className="text-base text-gray-400 font-medium">{shortDesc}</p>
-        <p className="text-xl font-semibold">Rp {price}.000</p>
+        <p className="text-gray-400">{shortDesc}</p>
+        <p className="text-xl font-semibold mb-2">Rp {price}.000</p>
       </div>
     </div>
   );

@@ -7,11 +7,9 @@ interface Data {
 
 const Category: React.FC<Data> = ({ imageUrl, name }) => {
   return (
-    <div className="">
-      <img src={imageUrl} alt={name} className="aspect-square" />
-      <h3 className="text-2xl font-semibold text-gray-600 mt-8 mb-24">
-        {name}
-      </h3>
+    <div>
+      <img src={imageUrl} alt={name} className="w-full lg:h-96 max-lg:h-full" />
+      <h3 className="text-2xl font-semibold text-gray-600 mt-8">{name}</h3>
     </div>
   );
 };

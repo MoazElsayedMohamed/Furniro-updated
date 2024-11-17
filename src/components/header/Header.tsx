@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Logo from "../logo/Logo";
 import Navbar from "../navbar/Navbar";
 import Navicons from "../navicons/Navicons";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
@@ -9,7 +10,8 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 0); // Trigger the scrolled state at 50px
+      setScrolled(window.scrollY > 0); // Trigger the scrolled state
+      setOpenMenu(false);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -17,13 +19,15 @@ const Header = () => {
   }, []);
   return (
     <header
-      className={`h-24 bg-white w-full flex items-center justify-around z-50 max-md:justify-between max-md:px-5 ${
-        scrolled ? "fixed" : ""
+      className={`h-24 bg-white w-full flex items-center justify-around z-50 max-md:justify-between max-md:pl-5  ${
+        scrolled ? "fixed shadow-md" : "relative"
       } `}
     >
       <div className="flex items-center gap-1 ">
         <Logo />
-        <h2 className="text-3xl font-bold">Furniro</h2>
+        <Link className="text-3xl font-bold" to="/">
+          Furniro
+        </Link>
       </div>
       <Navbar openMenu={openMenu} setOpenMenu={setOpenMenu} />
       <Navicons openMenu={openMenu} setOpenMenu={setOpenMenu} />

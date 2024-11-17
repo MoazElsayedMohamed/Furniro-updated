@@ -4,9 +4,11 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
+      xs: "480px",
       sm: "640px",
-      md: "768px",
+      md: "800px",
       lg: "1200px",
+      "2xl": "1536px",
     },
     backgroundImage: {
       "custom-image": "url('/public/hero.webp')",
@@ -15,6 +17,12 @@ export default {
       "2vh": "150vh",
     },
     extend: {
+      container: {
+        center: true,
+        screens: {
+          lg: "1200px",
+        },
+      },
       height: {
         "2-screen": "150vh",
       },

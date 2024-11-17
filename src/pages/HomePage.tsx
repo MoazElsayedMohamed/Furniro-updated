@@ -1,7 +1,6 @@
 import Categories from "../components/categories/Categories";
 import HomeHero from "../components/hero/HomeHero";
 import Products from "../components/products/Products";
-
 const HomePage = () => {
   return (
     <div>

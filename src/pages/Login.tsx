@@ -76,10 +76,13 @@ const Login = () => {
   };
 
   return (
-    <section className="relative bg-custom-image bg-cover h-2-screen ">
-      <div className="flex justify-center items-center md:absolute md:top-0 md:start-0 w-full h-full">
-        <div className="bg-white rounded-xl shadow-md py-20 px-10 md:w-2/5 max-md:w-4/5 ">
-          <form className="mb-32 " onSubmit={handleSubmit(onSubmit)}>
+    <section className="bg-custom-image bg-cover h-full bg-center bg-no-repeat py-24 max-xs:py-12  ">
+      <div className="flex justify-center items-center w-full h-full">
+        <div className="bg-white rounded-xl shadow-md lg:py-20 px-10 md:w-2/5 max-md:w-4/5 max-xs:py-10 md:py-10 md:px-6 xs:py-14  max-xs:px-5 ">
+          <form
+            className="mb-32 max-xs:mb-16"
+            onSubmit={handleSubmit(onSubmit)}
+          >
             <h1 className="text-3xl text-gray-600 mb-12 ">Sign in</h1>
             <div className="mb-8">
               <FormRow
@@ -96,7 +99,7 @@ const Login = () => {
                 register={register}
               />
               {errors.email && (
-                <p className="text-red-500 ">{errors.email.message}</p>
+                <p className="text-red-500 text-sm ">{errors.email.message}</p>
               )}
             </div>
             <div className="mb-4">
@@ -112,7 +115,9 @@ const Login = () => {
                 register={register}
               />
               {errors.password && (
-                <p className="text-red-500">{errors.password.message}</p>
+                <p className="text-red-500 text-sm">
+                  {errors.password.message}
+                </p>
               )}
             </div>
             <div className="mt-8">
@@ -128,9 +133,11 @@ const Login = () => {
                   className={`w-4 h-4 ${checked ? "absolute" : "hidden"}`}
                 />
                 <span className="w-4 h-4 border border-black"></span>
-                <span>Remember me</span>
+                <span className="max-xs:text-sm">Remember me</span>
               </div>
-              <Link to="#">Need Help?</Link>
+              <Link to="#" className="max-xs:text-sm">
+                Need Help?
+              </Link>
             </div>
           </form>
           <p className=" text-gray-300">

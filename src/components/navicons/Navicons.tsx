@@ -21,21 +21,42 @@ const Navicons: React.FC<NavbarProps> = ({ openMenu, setOpenMenu }) => {
     <nav
       className={
         openMenu
-          ? "flex absolute items-center top-24 z-50 end-2 gap-3"
+          ? " absolute flex flex-col items-center top-60 z-50 end-0  gap-2 xs:w-1/4 max-xs:w-1/3"
           : "flex items-center gap-8 max-md:hidden"
       }
     >
       {token && username ? (
         <p>{username}</p>
       ) : (
-        <Link to="/login" onClick={() => setOpenMenu(false)}>
+        <Link
+          to="/login"
+          onClick={() => setOpenMenu(false)}
+          className={`w-full flex justify-center pb-2 ${
+            openMenu && "border-b border-gray-200"
+          }`}
+        >
           <SvgIcon name="login" className="w-6 h-5" />
         </Link>
       )}
-
-      <SvgIcon name="search" className="w-6 h-5" />
-      <SvgIcon name="heart" className="w-6 h-5" />
-      <SvgIcon name="shopping-cart" className="w-6 h-5" />
+      <Link
+        className={`w-full flex justify-center pb-2 ${
+          openMenu && "border-b border-gray-200"
+        }`}
+        to="#"
+      >
+        <SvgIcon name="search" className="w-6 h-5" />
+      </Link>
+      <Link
+        className={`w-full flex justify-center pb-2 ${
+          openMenu && "border-b border-gray-200"
+        }`}
+        to="#"
+      >
+        <SvgIcon name="heart" className="w-6 h-5" />
+      </Link>
+      <Link to="#" className="w-full flex justify-center pb-2">
+        <SvgIcon name="shopping-cart" className="w-6 h-5" />
+      </Link>
       {token && (
         <button
           className="border border-primary text-primary py-2 px-4 hover:bg-primary hover:text-white "

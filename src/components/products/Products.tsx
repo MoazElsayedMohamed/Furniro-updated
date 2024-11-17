@@ -4,7 +4,7 @@ import ProductElements from "./ProductElements";
 
 const Products = () => {
   return (
-    <section className="text-center mb-12">
+    <section className="text-center mb-12 container">
       <h2 className="text-3xl capitalize  mb-12 font-bold text-gray-900">
         our products
       </h2>

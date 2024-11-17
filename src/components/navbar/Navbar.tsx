@@ -10,16 +10,20 @@ const Navbar: React.FC<NavbarProps> = ({ openMenu, setOpenMenu }) => {
   return (
     <nav>
       <div onClick={() => setOpenMenu(!openMenu)}>
-        <IoMenu className="hidden w-32 h-8 max-md:flex " />
+        <IoMenu className="hidden w-32 h-8 cursor-pointer max-md:flex max-md:self-center " />
       </div>
       <ul
         className={
           openMenu
-            ? "absolute flex items-center gap-4 pt-8 pb-5 pl-5 w-full bg-white z-50 start-0"
-            : "flex list-none items-center gap-14 cursor-pointer max-md:hidden "
+            ? "absolute flex flex-col gap-2 pt-8 pb-5 bg-white z-50 end-0 h-80 max-sm:w-1/3 xs:w-1/4"
+            : "flex list-none items-center gap-14 cursor-pointer max-md:hidden relative "
         }
       >
-        <li>
+        <li
+          className={`w-full flex justify-center pb-1 ${
+            openMenu && "border-b border-gray-200"
+          }`}
+        >
           <NavLink
             to="/"
             className="hover:text-primary"
@@ -28,7 +32,11 @@ const Navbar: React.FC<NavbarProps> = ({ openMenu, setOpenMenu }) => {
             Home
           </NavLink>
         </li>
-        <li>
+        <li
+          className={`w-full flex justify-center pb-1 ${
+            openMenu && "border-b border-gray-200"
+          }`}
+        >
           <NavLink
             to="/shop"
             className="hover:text-primary"
@@ -37,8 +45,18 @@ const Navbar: React.FC<NavbarProps> = ({ openMenu, setOpenMenu }) => {
             Shop
           </NavLink>
         </li>
-        <li className="hover:text-primary">About</li>
-        <li>
+        <li
+          className={`w-full flex justify-center pb-1 hover:text-primary ${
+            openMenu && "border-b border-gray-200"
+          }`}
+        >
+          About
+        </li>
+        <li
+          className={`w-full flex justify-center pb-1 ${
+            openMenu && "border-b border-gray-200"
+          }`}
+        >
           <NavLink
             to="/contact"
             className="hover:text-primary"
