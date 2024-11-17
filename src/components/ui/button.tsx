@@ -31,7 +31,7 @@ const buttonVariants = cva(
         sm: "h-8 rounded-md px-4 py-6 text-base w-auto ",
         base: "text-lg",
         md: "h-10 rounded-md text-2xl",
-        lg: "font-normal text-lg py-2",
+        lg: "font-normal text-lg py-3.5 text-white",
         cardSize: "",
         icon: "h-9 w-9",
       },

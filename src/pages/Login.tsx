@@ -116,7 +116,7 @@ const Login = () => {
               )}
             </div>
             <div className="mt-8">
-              <Button size="lg">sign in</Button>
+              <Button size="lg">Sign in</Button>
             </div>
             <div className="flex justify-between mt-4 font-normal text-gray-600">
               <div
