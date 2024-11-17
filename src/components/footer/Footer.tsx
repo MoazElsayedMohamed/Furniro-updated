@@ -21,7 +21,7 @@ const Footer = () => {
         <div className="grid grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] gap-8 pb-12  ">
           <div className="flex flex-col">
             <h3 className="text-2xl font-bold mb-6">Furniro.</h3>
-            <p className="text-gray-200 font-normal w-full text-base">
+            <p className="text-gray-200 font-normal w-full">
               400 University Drive Suite 200 Coral Gables,
               <span className="block">FL 33134 USA</span>
             </p>
@@ -68,14 +68,14 @@ const Footer = () => {
           <div className="w-full">
             <h4 className="text-gray-200 mb-8 max-lg:mb-6">Newsletter</h4>
             <form
-              className="flex items-start gap-2 "
+              className="flex gap-2 "
               onSubmit={handleSubmit((data) => console.log(data))}
             >
               <div>
                 <input
                   type="email"
                   placeholder="Enter Your Email Address"
-                  className="outline-none border-b border-black text-sm pb-2 placeholder:text-gray-200 placeholder:font-normal p-0"
+                  className="outline-none border-b border-black text-sm pb-2 placeholder:text-gray-200 placeholder:font-normal"
                   {...register("email")}
                 />
                 {errors.email && (
@@ -83,7 +83,7 @@ const Footer = () => {
                 )}
               </div>
               <div>
-                <button className="outline-none border-b border-black pb-2  text-sm uppercase  cursor-pointer font-medium">
+                <button className="outline-none border-b border-black pb-2 text-sm uppercase  cursor-pointer">
                   subscribe
                 </button>
               </div>

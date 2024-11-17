@@ -25,9 +25,9 @@ const FormRow: React.FC<FormProps> = ({
   register,
 }) => {
   return (
-    <div className="mb-4">
-      <div className="flex items-center justify-between ">
-        <label htmlFor={id} className="text-gray-300 mb-2 ">
+    <div className="mb-2">
+      <div className="flex items-center justify-between">
+        <label htmlFor={id} className="text-gray-300 mb-2">
           {label}
         </label>
         {id === "password" && (
@@ -38,7 +38,7 @@ const FormRow: React.FC<FormProps> = ({
               <IoMdEye className="text-xl text-gray-300" />
             )}
             <p
-              className="font-normal text-lg text-gray-300 cursor-pointer "
+              className="font-normal text-lg text-gray-300 cursor-pointer"
               onClick={onClick}
             >
               {showPassword ? "hide" : "show"}
@@ -49,7 +49,7 @@ const FormRow: React.FC<FormProps> = ({
       <input
         type={type}
         id={id}
-        className="block h-16 border border-gray-800 w-full rounded-xl outline-none p-4  "
+        className="block h-16 border border-gray-800 w-full rounded-xl outline-none p-4"
         placeholder={placeholder}
         {...register(inputName)}
       />

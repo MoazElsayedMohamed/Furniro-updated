@@ -81,7 +81,7 @@ const Login = () => {
         <div className="bg-white rounded-xl shadow-md py-20 px-10 md:w-2/5 max-md:w-4/5 ">
           <form className="mb-32 " onSubmit={handleSubmit(onSubmit)}>
             <h1 className="text-3xl text-gray-600 mb-12 ">Sign in</h1>
-            <div className="mb-4">
+            <div className="mb-8">
               <FormRow
                 id="identifier"
                 type="text"
@@ -144,7 +144,7 @@ const Login = () => {
           <p className=" text-gray-300 mt-2">
             This page is protected by Google reCAPTCHA to ensure you&apos;re not
             a bot.
-            <Link className="text-black" to="#">
+            <Link className="text-black ml-1" to="#">
               Learn more.
             </Link>
           </p>
