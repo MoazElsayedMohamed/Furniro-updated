@@ -1,12 +1,7 @@
 import { toast } from "sonner";
 import Icon from "./Icon";
 
-interface NavbarProps {
-  openMenu?: boolean;
-  setOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-const Navicons: React.FC<NavbarProps> = ({ openMenu, setOpenMenu }) => {
+const Navicons = () => {
   const token = localStorage.getItem("token");
   const username = localStorage.getItem("username");
 
@@ -17,47 +12,15 @@ const Navicons: React.FC<NavbarProps> = ({ openMenu, setOpenMenu }) => {
     toast.success("logged out successfully");
   }
   return (
-    <nav
-      className={
-        openMenu
-          ? " absolute flex flex-col items-center top-60 z-50 end-0  gap-2 xs:w-1/4 max-xs:w-1/3"
-          : "flex items-center gap-8 max-md:hidden"
-      }
-    >
+    <nav className="flex items-center gap-8 max-md:hidden">
       {token && username ? (
         <p>{username}</p>
       ) : (
-        <Icon
-          name="login"
-          route="/login"
-          openMenu={openMenu}
-          setOpenMenu={setOpenMenu}
-        />
+        <Icon name="login" route="/login" />
       )}
-      <Icon
-        name="search"
-        route="#"
-        openMenu={openMenu}
-        setOpenMenu={function (): void {
-          throw new Error("Function not implemented.");
-        }}
-      />
-      <Icon
-        name="heart"
-        route="#"
-        openMenu={openMenu}
-        setOpenMenu={function (): void {
-          throw new Error("Function not implemented.");
-        }}
-      />
-      <Icon
-        name="shopping-cart"
-        route="#"
-        openMenu={openMenu}
-        setOpenMenu={function (): void {
-          throw new Error("Function not implemented.");
-        }}
-      />
+      <Icon name="search" route="#" />
+      <Icon name="heart" route="#" />
+      <Icon name="shopping-cart" route="#" />
       {token && (
         <button
           className="border border-primary text-primary py-2 px-4 hover:bg-primary hover:text-white "

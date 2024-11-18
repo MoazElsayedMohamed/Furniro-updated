@@ -14,7 +14,7 @@ const buttonVariants = cva(
         destructive:
           "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
-          "border border-primary px-20 py-3 font-semibold rounded-none text-primary hover:bg-primary hover:text-white",
+          "border border-primary px-20 py-3 max-md:px-12 max-md:py-2 font-semibold rounded-none text-primary hover:bg-primary hover:text-white",
         outline1:
           "border border-black rounded-xl mr-4 text-xl capitalize mt-4 outline-none",
         outline2:
@@ -29,9 +29,9 @@ const buttonVariants = cva(
         default: "h-9 px-4 py-2 text-4xl",
         xs: "h-4 rounded-md px-2 py-3 text-sm",
         sm: "h-8 rounded-md px-4 py-6 text-base w-auto ",
-        base: "text-lg",
+        base: "text-lg max-md:text-base",
         md: "h-10 rounded-md text-2xl",
-        lg: "font-normal text-lg py-3.5 text-white",
+        lg: "font-normal text-lg py-3.5 text-white max-sm:py-1.5 max-sm:text-base",
         cardSize: "",
         icon: "h-9 w-9",
       },

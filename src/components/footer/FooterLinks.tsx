@@ -11,7 +11,7 @@ const FooterLinks: React.FC<LinksProps> = ({ route, name }) => {
     <>
       <NavLink
         to={route}
-        className=" cursor-pointer capitalize hover:text-primary lg:mb-8 max-lg:mb-5"
+        className=" cursor-pointer capitalize hover:text-primary lg:mb-8 max-lg:mb-5 max-md:text-sm"
       >
         {name}
       </NavLink>

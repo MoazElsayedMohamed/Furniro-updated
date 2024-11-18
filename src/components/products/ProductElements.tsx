@@ -36,7 +36,7 @@ const ProductElements: React.FC<Size> = ({ PAGE_SIZE }) => {
   });
 
   return (
-    <div className="grid grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] px-8 gap-4 mb-16">
+    <div className="grid lg:grid-cols-4 md:grid-cols-3 xs:grid-cols-2 px-8 gap-4 mb-16">
       {productsElements}
     </div>
   );
