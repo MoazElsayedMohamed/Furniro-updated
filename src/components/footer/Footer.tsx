@@ -21,7 +21,7 @@ const Footer = () => {
     <footer className="border-t border-gray-700">
       <div className="mt-12 max-lg:px-4 container md:mx-auto ">
         <div className="border-b border-gray-100">
-          <div className="grid grid-cols-[repeat(auto-fit,_minmax(220px,_auto))] gap-x-16 pb-12 max-w-full lg:justify-items-center gap-y-12">
+          <div className="grid grid-cols-[repeat(auto-fit,_minmax(220px,_auto))] gap-x-16 pb-12 max-w-full  gap-y-12">
             <div className="flex flex-col">
               <Link to="/" className="text-2xl font-bold mb-6">
                 Furniro.
@@ -31,15 +31,13 @@ const Footer = () => {
                 <span className="block">FL 33134 USA</span>
               </p>
             </div>
-            <div className="w-1/2">
-              <div className="flex flex-col ">
-                <h4 className="text-gray-200 mb-8 max-lg:mb-6">Links</h4>
-                {links?.data.map((link) => {
-                  return <FooterLinks name={link.name} route={link.route} />;
-                })}
-              </div>
+            <div className="flex flex-col justify-self-center ">
+              <h4 className="text-gray-200 mb-8 max-lg:mb-6">Links</h4>
+              {links?.data.map((link) => {
+                return <FooterLinks name={link.name} route={link.route} />;
+              })}
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col justify-self-center">
               <h4 className="text-gray-200 mb-8 max-lg:mb-6">Help</h4>
               {Help?.data.map((one) => {
                 return <FooterLinks name={one.name} route={one.route} />;
