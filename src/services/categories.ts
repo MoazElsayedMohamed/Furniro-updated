@@ -4,14 +4,14 @@ export const categories = {
       id: 5,
       attributes: {
         name: "Dining",
-        image: "/range-1.webp",
+        image: "/Image-living room.webp",
       },
     },
     {
       id: 6,
       attributes: {
         name: "Living",
-        image: "/range-2.webp",
+        image: "/Mask Group.webp",
       },
     },
 
@@ -19,7 +19,7 @@ export const categories = {
       id: 7,
       attributes: {
         name: "Bedroom",
-        image: "/range-3.webp",
+        image: "/Mask Group (1).webp",
       },
     },
   ],
