@@ -13,7 +13,7 @@ const Hero = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
             tellus, luctus nec ullamcorper mattis.
           </p>
-          <button className="font-bold uppercase bg-primary py-6 px-20 text-white max-md:py-3 max-md:px-10 max-md:text-sm">
+          <button className="font-bold uppercase bg-primary py-6 px-20 text-white max-md:py-3 max-md:px-10 max-md:text-sm outline-none">
             buy now
           </button>
         </div>
