@@ -14,6 +14,9 @@ export default {
       "custom-image": "url('/public/hero.webp')",
     },
     extend: {
+      animation: {
+        "spin-slow": "spin 3s linear infinite",
+      },
       container: {
         center: true,
         screens: {

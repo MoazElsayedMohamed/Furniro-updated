@@ -1,19 +1,17 @@
 import Product from "./Product";
-// import { Skeleton } from "../ui/skeleton";
-// import { useProducts } from "../../services/apiProducts";
-// import { URL } from "../../utils/constants";
+import { URL } from "../../utils/constants";
 import { Link } from "react-router-dom";
 import React from "react";
-import { products } from "@/services/products";
+import { useProducts } from "../hooks/useProducts";
+import Loader from "../Loader/Loader";
 
 interface Size {
   PAGE_SIZE: number;
 }
 
 const ProductElements: React.FC<Size> = ({ PAGE_SIZE }) => {
-  // const { data: products, error, isLoading } = useProducts();
-  // if (isLoading) return <p>loading...</p>;
-  // if (error) return <p>Error loading Products</p>;
+  const { data: products, isLoading } = useProducts();
+  if (isLoading) return <Loader />;
 
   const currentPage = 1;
   const startIndex = (currentPage - 1) * PAGE_SIZE;
@@ -29,7 +27,7 @@ const ProductElements: React.FC<Size> = ({ PAGE_SIZE }) => {
           price={product.attributes.price}
           discount={product.attributes.discount}
           shortDesc={product.attributes.short_desc}
-          imageUrl={product.attributes.image.data.attributes.url}
+          imageUrl={`${URL}${product.attributes.image.data.attributes.url}`}
         />
       </Link>
     );

@@ -1,4 +1,4 @@
-import { useQuery, UseQueryResult } from "@tanstack/react-query";
+// import { useQuery, UseQueryResult } from "@tanstack/react-query";
 import { URL } from "../utils/constants";
 
 interface ProductAttributes {
@@ -26,11 +26,11 @@ interface ProductData {
   attributes: ProductAttributes;
 }
 
-interface ProductResponse {
+export interface ProductResponse {
   data: ProductData[];
 }
 
-async function getProducts(): Promise<ProductResponse> {
+export async function getProducts(): Promise<ProductResponse> {
   const response = await fetch(
     `${URL}/api/products?pagination[page]=1&pagination[pageSize]=100&populate[0]=image&sort=name&populate[1]=reviews&populate[2]=tag&populate[3]=category`
   );
@@ -43,9 +43,9 @@ async function getProducts(): Promise<ProductResponse> {
   return data;
 }
 
-export function useProducts(): UseQueryResult<ProductResponse> {
-  return useQuery<ProductResponse>({
-    queryKey: ["product"],
-    queryFn: getProducts,
-  });
-}
+// export function useProducts(): UseQueryResult<ProductResponse> {
+//   return useQuery<ProductResponse>({
+//     queryKey: ["product"],
+//     queryFn: getProducts,
+//   });
+// }

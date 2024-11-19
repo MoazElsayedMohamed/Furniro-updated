@@ -1,20 +1,18 @@
-// import React from "react";
+import { URL } from "@/utils/constants";
+import { useCategories } from "../hooks/useCategories";
 import Category from "./Category";
-// import { useCategories } from "../../services/apiCategories";
-import { categories } from "@/services/categories";
-
+import Loader from "../Loader/Loader";
 const Categories = () => {
-  // const { data: categories, error, isLoading } = useCategories();
+  const { data: categories, isLoading } = useCategories();
 
-  // if (isLoading) return <p>loading</p>;
-  // if (error) return <p>Error loading categories</p>;
+  if (isLoading) return <Loader />;
 
   const categoriesElements = categories?.data.map((category) => {
     return (
       <Category
         key={category.id}
         name={category.attributes.name}
-        imageUrl={category.attributes.image}
+        imageUrl={`${URL}${category.attributes.image.data.attributes.url}`}
       />
     );
   });

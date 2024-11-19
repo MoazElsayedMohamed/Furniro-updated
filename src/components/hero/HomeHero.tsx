@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div className="relative bg-custom-image md:h-screen bg-cover bg-center bg-no-repeat mt-24 max-md:py-4">
+    <div className="relative bg-custom-image md:h-screen bg-cover bg-center bg-no-repeat mt-24 max-md:py-8 max-sm:mt-20">
       <div className="md:absolute md:top-0 md:start-0 w-full h-full flex items-center justify-end lg:px-10 2xl:px-20 max-lg:px-10 max-md:px-5 max-md:justify-center">
         <div className=" bg-secondary md:w-1/2 xl:w-3/5 max-md:w-full p-6 md:p-10 rounded-xl 2xl:w-1/3">
           <h3 className="capitalize font-semibold tracking-widest text-gray-600 max-md:text-sm">

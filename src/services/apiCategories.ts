@@ -1,4 +1,4 @@
-import { useQuery, UseQueryResult } from "@tanstack/react-query";
+// import { useQuery, UseQueryResult } from "@tanstack/react-query";
 import { URL } from "../utils/constants";
 
 interface CategoryAttributes {
@@ -17,11 +17,11 @@ interface CategoryData {
   attributes: CategoryAttributes;
 }
 
-interface CategoriesResponse {
+export interface CategoriesResponse {
   data: CategoryData[];
 }
 
-const getCategories = async (): Promise<CategoriesResponse> => {
+export const getCategories = async (): Promise<CategoriesResponse> => {
   const response = await fetch(
     `${URL}/api/categories?pagination[page]=1&pagination[pageSize]=10&populate=image`
   );
@@ -33,9 +33,9 @@ const getCategories = async (): Promise<CategoriesResponse> => {
   return data;
 };
 
-export function useCategories(): UseQueryResult<CategoriesResponse> {
-  return useQuery<CategoriesResponse>({
-    queryKey: ["category"],
-    queryFn: getCategories,
-  });
-}
+// export function useCategories(): UseQueryResult<CategoriesResponse> {
+//   return useQuery<CategoriesResponse>({
+//     queryKey: ["category"],
+//     queryFn: getCategories,
+//   });
+// }
