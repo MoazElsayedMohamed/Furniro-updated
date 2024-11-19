@@ -24,7 +24,7 @@ const Categories = () => {
       <h3 className="text-3xl capitalize font-bold mb-4 text-gray-600 max-md:text-2xl">
         browse the range
       </h3>
-      <p className="text-xl mb-12 text-gray-300 font-normal max-md:text-base">
+      <p className="text-xl mb-12 text-gray-300 font-normal max-md:text-sm">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </p>
       <div className=" grid md:grid-cols-3 xs:grid-cols-2 gap-x-8 gap-y-20 max-md:gap-4">

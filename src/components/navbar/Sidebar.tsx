@@ -2,6 +2,7 @@ import React from "react";
 import { IoClose } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import Logo from "../logo/Logo";
+import { SvgIcon } from "../svgIcon/SvgIcon";
 interface NavbarProps {
   openMenu: boolean;
   setOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
@@ -26,7 +27,7 @@ const Sidebar: React.FC<NavbarProps> = ({ openMenu, setOpenMenu }) => {
         />
       </div>
 
-      <nav className="mt-8 absolute flex flex-col items-center justify-center w-full">
+      <nav className="mt-8 absolute flex flex-col items-center justify-start w-full">
         <Link
           to="/"
           className=" px-6 py-2 hover:text-primary text-lg"
@@ -42,6 +43,38 @@ const Sidebar: React.FC<NavbarProps> = ({ openMenu, setOpenMenu }) => {
         </Link>
         <Link to="#" className=" px-6 py-2 hover:text-primary text-lg">
           Contact
+        </Link>
+        <Link
+          to="/login"
+          onClick={() => setOpenMenu(false)}
+          className=" px-6 py-2 flex items-center gap-2 "
+        >
+          <SvgIcon name="login" className="w-5 h-4" />
+          <h2 className="hover:text-primary text-lg">Login</h2>
+        </Link>
+        <Link
+          to="#"
+          onClick={() => setOpenMenu(false)}
+          className=" px-6 py-2 flex items-center gap-2 "
+        >
+          <SvgIcon name="search" className="w-5 h-4" />
+          <h2 className="hover:text-primary text-lg">Search</h2>
+        </Link>
+        <Link
+          to="#"
+          onClick={() => setOpenMenu(false)}
+          className=" px-6 py-2 flex items-center gap-2 "
+        >
+          <SvgIcon name="like" className="w-5 h-4" />
+          <h2 className="hover:text-primary text-lg">Like</h2>
+        </Link>
+        <Link
+          to="#"
+          onClick={() => setOpenMenu(false)}
+          className=" px-6 py-2 flex items-center gap-2 "
+        >
+          <SvgIcon name="shopping-cart" className="w-6 h-5" />
+          <h2 className="hover:text-primary text-lg">Shopping Cart</h2>
         </Link>
       </nav>
     </div>
