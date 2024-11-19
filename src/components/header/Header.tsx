@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <header
-      className={`bg-white w-full flex items-center justify-around z-50 max-md:justify-between max-md:pl-5 shadow-md fixed h-24 top-0`}
+      className={`bg-white w-full flex items-center justify-around z-50 max-md:justify-between max-md:pl-5 shadow-md fixed h-24 top-0 max-sm:h-20`}
     >
       <div className="flex items-center gap-1 ">
         <Logo />
