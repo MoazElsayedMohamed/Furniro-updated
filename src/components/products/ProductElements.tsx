@@ -2,16 +2,14 @@ import Product from "./Product";
 import { URL } from "../../utils/constants";
 import { Link } from "react-router-dom";
 import React from "react";
-import { useProducts } from "../hooks/useProducts";
-import Loader from "../Loader/Loader";
+import { useProducts } from "../../hooks/useProducts";
 
 interface Size {
   PAGE_SIZE: number;
 }
 
 const ProductElements: React.FC<Size> = ({ PAGE_SIZE }) => {
-  const { data: products, isLoading } = useProducts();
-  if (isLoading) return <Loader />;
+  const { data: products } = useProducts();
 
   const currentPage = 1;
   const startIndex = (currentPage - 1) * PAGE_SIZE;

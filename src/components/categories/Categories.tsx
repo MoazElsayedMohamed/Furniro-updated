@@ -1,11 +1,9 @@
 import { URL } from "@/utils/constants";
-import { useCategories } from "../hooks/useCategories";
+import { useCategories } from "../../hooks/useCategories";
 import Category from "./Category";
-import Loader from "../Loader/Loader";
+import Loaders from "../Loader/Loaders";
 const Categories = () => {
   const { data: categories, isLoading } = useCategories();
-
-  if (isLoading) return <Loader />;
 
   const categoriesElements = categories?.data.map((category) => {
     return (
@@ -25,9 +23,13 @@ const Categories = () => {
       <p className="text-xl mb-12 text-gray-300 font-normal max-md:text-sm">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </p>
-      <div className=" grid md:grid-cols-3 xs:grid-cols-2 gap-x-8 gap-y-20 max-md:gap-4">
-        {categoriesElements}
-      </div>
+      {isLoading ? (
+        <Loaders numberOfLoaders={3} />
+      ) : (
+        <div className=" grid md:grid-cols-3 xs:grid-cols-2 gap-x-8 gap-y-20 max-md:gap-4">
+          {categoriesElements}
+        </div>
+      )}
     </section>
   );
 };
