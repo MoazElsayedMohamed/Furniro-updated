@@ -1,3 +1,4 @@
+import { SIGN_IN_URL } from "@/utils/constants";
 import { SubmitHandler } from "react-hook-form";
 import { toast } from "sonner";
 
@@ -9,7 +10,7 @@ export interface SumbitData {
 export const onSubmit: SubmitHandler<SumbitData> = async (data) => {
   const { email, password } = data;
   try {
-    const response = await fetch(`http://localhost:1337/api/auth/local`, {
+    const response = await fetch(`${SIGN_IN_URL}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

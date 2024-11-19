@@ -1,5 +1,5 @@
 // import { useQuery, UseQueryResult } from "@tanstack/react-query";
-import { URL } from "../utils/constants";
+import { CATEGORIES_URL } from "../utils/constants";
 
 interface CategoryAttributes {
   name: string;
@@ -22,9 +22,7 @@ export interface CategoriesResponse {
 }
 
 export const getCategories = async (): Promise<CategoriesResponse> => {
-  const response = await fetch(
-    `${URL}/api/categories?pagination[page]=1&pagination[pageSize]=10&populate=image`
-  );
+  const response = await fetch(`${CATEGORIES_URL}`);
   if (!response.ok) {
     throw new Error("Failed to fetch categories");
   }

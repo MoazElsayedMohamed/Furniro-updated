@@ -1,5 +1,4 @@
-// import { useQuery, UseQueryResult } from "@tanstack/react-query";
-import { URL } from "../utils/constants";
+import { PRODUCTS_URL } from "../utils/constants";
 
 interface ProductAttributes {
   name: string;
@@ -31,9 +30,7 @@ export interface ProductResponse {
 }
 
 export async function getProducts(): Promise<ProductResponse> {
-  const response = await fetch(
-    `${URL}/api/products?pagination[page]=1&pagination[pageSize]=100&populate[0]=image&sort=name&populate[1]=reviews&populate[2]=tag&populate[3]=category`
-  );
+  const response = await fetch(`${PRODUCTS_URL}`);
 
   if (!response.ok) {
     throw new Error("Failed to fetch products");
@@ -42,10 +39,3 @@ export async function getProducts(): Promise<ProductResponse> {
   const data: ProductResponse = await response.json();
   return data;
 }
-
-// export function useProducts(): UseQueryResult<ProductResponse> {
-//   return useQuery<ProductResponse>({
-//     queryKey: ["product"],
-//     queryFn: getProducts,
-//   });
-// }
