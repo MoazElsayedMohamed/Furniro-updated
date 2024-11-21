@@ -5,15 +5,15 @@ import React from "react";
 import { useProducts } from "../../hooks/useProducts";
 
 interface Size {
-  PAGE_SIZE: number;
+  pageSize: number;
+  currentPage: number;
 }
 
-const ProductElements: React.FC<Size> = ({ PAGE_SIZE }) => {
+const ProductElements: React.FC<Size> = ({ pageSize, currentPage }) => {
   const { data: products } = useProducts();
 
-  const currentPage = 1;
-  const startIndex = (currentPage - 1) * PAGE_SIZE;
-  const endIndex = startIndex + PAGE_SIZE;
+  const startIndex = (currentPage - 1) * pageSize;
+  const endIndex = startIndex + pageSize;
   const productsToDisplay = products?.data.slice(startIndex, endIndex);
 
   const productsElements = productsToDisplay?.map((product) => {

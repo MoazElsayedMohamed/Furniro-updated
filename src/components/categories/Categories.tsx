@@ -24,7 +24,11 @@ const Categories = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </p>
       {isLoading ? (
-        <Loaders numberOfLoaders={3} />
+        <Loaders
+          numberOfLoaders={3}
+          className="h-96 w-full bg-primary rounded-xl"
+          name="categories"
+        />
       ) : (
         <div className=" grid md:grid-cols-3 xs:grid-cols-2 gap-x-8 gap-y-20 max-md:gap-4">
           {categoriesElements}

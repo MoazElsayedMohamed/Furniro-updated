@@ -20,9 +20,9 @@ const buttonVariants = cva(
         outline2:
           "border border-black rounded-3xl text-xl py-2 px-10 mr-6 sm:max-xl:text-lg sm:max-xl:px-5 sm:max-xl:mb-4",
         secondary:
-          "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
+          "bg-secondary hover:bg-primary hover:text-white md:text-xl font-normal py-4 outline-none cursor-pointer ",
         ghost:
-          "bg-secondary py-8 px-6 hover:bg-primary hover:text-white cursor-pointer",
+          "bg-primary text-white md:text-xl font-normal py-4 outline-none cursor-pointer",
         link: "text-primary underline-offset-4 hover:underline",
       },
       size: {

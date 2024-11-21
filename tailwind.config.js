@@ -12,6 +12,7 @@ export default {
     },
     backgroundImage: {
       "custom-image": "url('/public/hero.webp')",
+      "shop-hero": "url('/public/shop-hero.webp')",
     },
     extend: {
       animation: {
@@ -29,6 +30,9 @@ export default {
         },
         secondary: {
           DEFAULT: "#FFF3E3",
+        },
+        ghost: {
+          DEFAULT: "#242424",
         },
 
         gray: {

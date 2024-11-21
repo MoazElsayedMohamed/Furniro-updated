@@ -12,10 +12,14 @@ const Products = () => {
         our products
       </h2>
       {isLoading ? (
-        <Loaders numberOfLoaders={3} />
+        <Loaders
+          numberOfLoaders={8}
+          className="h-96 w-full bg-primary rounded-none"
+          name="products"
+        />
       ) : (
         <>
-          <ProductElements PAGE_SIZE={8} />
+          <ProductElements pageSize={8} currentPage={1} />
           <Link
             className={buttonVariants({
               variant: "outline",

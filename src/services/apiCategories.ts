@@ -1,4 +1,3 @@
-// import { useQuery, UseQueryResult } from "@tanstack/react-query";
 import { CATEGORIES_URL } from "../utils/constants";
 
 interface CategoryAttributes {
@@ -30,10 +29,3 @@ export const getCategories = async (): Promise<CategoriesResponse> => {
   const data: CategoriesResponse = await response.json();
   return data;
 };
-
-// export function useCategories(): UseQueryResult<CategoriesResponse> {
-//   return useQuery<CategoriesResponse>({
-//     queryKey: ["category"],
-//     queryFn: getCategories,
-//   });
-// }

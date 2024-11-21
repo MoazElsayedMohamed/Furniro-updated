@@ -1,13 +1,12 @@
+import React from "react";
 import { Skeleton } from "../ui/skeleton";
+import { Props } from "./Loaders";
 
-const Loader = () => {
+const Loader: React.FC<Props> = ({ className, name }) => {
   return (
-    <div className="flex items-center space-x-4">
-      <Skeleton className="h-24 w-24 bg-gray-500 rounded-xl" />
-      <div className="space-y-2">
-        <Skeleton className="h-4 w-64 bg-gray-500" />
-        <Skeleton className="h-4 w-52 bg-gray-500" />
-      </div>
+    <div className="flex flex-col items-center gap-4">
+      <Skeleton className={className} />
+      {name === "categories" && <Skeleton className="h-4 w-24 bg-primary" />}
     </div>
   );
 };

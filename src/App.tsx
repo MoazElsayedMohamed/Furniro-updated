@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "./AppLayout";
 import { Toaster } from "sonner";
 import { lazy } from "react";
+import Shop from "./pages/Shop";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const Login = lazy(() => import("./pages/Login"));
@@ -19,6 +20,10 @@ function App() {
         {
           path: "/login",
           element: <Login />,
+        },
+        {
+          path: "shop",
+          element: <Shop />,
         },
       ],
     },
