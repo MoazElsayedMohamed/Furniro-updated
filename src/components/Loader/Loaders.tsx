@@ -15,7 +15,7 @@ const Loaders: React.FC<Props> = ({ numberOfLoaders, className, name }) => {
       <div
         className={`grid grid-cols-${
           numberOfLoaders > 3 ? numberOfLoaders / 2 : numberOfLoaders
-        } grid-rows-${name === "products" && "2"} gap-2`}
+        }  grid-rows-${name === "products" && "2"} gap-2`}
       >
         {loaders.map((_, index) => (
           <Loader key={index} className={className} name={name} />

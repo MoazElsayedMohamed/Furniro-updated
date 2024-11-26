@@ -34,6 +34,9 @@ export default {
         ghost: {
           DEFAULT: "#242424",
         },
+        violet: {
+          400: "#816DFA",
+        },
 
         gray: {
           50: "#F4F5F7", //50 light-1

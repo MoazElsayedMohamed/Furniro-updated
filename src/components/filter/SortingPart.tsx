@@ -3,7 +3,11 @@ import { FilterProps } from "./Filter";
 
 const SortingPart: React.FC<FilterProps> = ({ setPageSize }) => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setPageSize?.(Number(event.target.value));
+    if (event.target.value) {
+      setPageSize?.(Number(event.target.value));
+    } else {
+      setPageSize?.(16);
+    }
   };
   return (
     <div className="flex items-center gap-4 lg:justify-self-end max-xs:flex-col max-xs:items-start">

@@ -2,10 +2,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "./AppLayout";
 import { Toaster } from "sonner";
 import { lazy } from "react";
-import Shop from "./pages/Shop";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const Login = lazy(() => import("./pages/Login"));
+const Shop = lazy(() => import("./pages/Shop"));
+const SingleProduct = lazy(() => import("./pages/SingleProduct"));
 
 function App() {
   const router = createBrowserRouter([
@@ -25,6 +26,7 @@ function App() {
           path: "shop",
           element: <Shop />,
         },
+        { path: "/product/:id", element: <SingleProduct /> },
       ],
     },
   ]);
