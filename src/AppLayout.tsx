@@ -1,27 +1,25 @@
 import { Outlet, useLocation } from "react-router-dom";
 import Header from "./components/header/Header";
-import { Suspense } from "react";
 import Footer from "./components/footer/Footer";
-import Spinner from "./components/spinner/Spinner";
+import Work from "./components/work/Work";
+import { CartProvider } from "./components/productDetails/useCart";
+import { Suspense } from "react";
 
 const AppLayout = () => {
   const location = useLocation();
   const isLogin = location.pathname === "/login";
 
-  const Loading = () => {
-    return <p>loading...</p>;
-  };
-
   return (
-    <div>
-      <Suspense fallback={<Loading />}>
+    <Suspense>
+      <CartProvider>
         <Header />
-      </Suspense>
-      <Suspense fallback={<Spinner />}>
         <Outlet />
-        {!isLogin && <Footer />}
-      </Suspense>
-    </div>
+      </CartProvider>
+      {(location.pathname === "/shop" ||
+        location.pathname === "/cart" ||
+        location.pathname === "/checkout") && <Work />}
+      {!isLogin && <Footer />}
+    </Suspense>
   );
 };
 

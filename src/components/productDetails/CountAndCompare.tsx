@@ -1,8 +1,10 @@
-import { useState } from "react";
+import React from "react";
 import { Button } from "../ui/button";
+import { DetailsProps } from "./ProductDetails";
+import { useCart } from "./useCart";
 
-const CountAndCompare = () => {
-  const [count, setCount] = useState(1);
+const CountAndCompare: React.FC<DetailsProps> = ({ product }) => {
+  const { addToCart, count, setCount } = useCart();
 
   return (
     <div className="flex gap-4">
@@ -17,7 +19,9 @@ const CountAndCompare = () => {
         <p>{count}</p>
         <p onClick={() => setCount(count + 1)}>+</p>
       </Button>
-      <Button variant="destructive">Add to cart</Button>
+      <Button variant="destructive" onClick={() => addToCart(product)}>
+        Add to cart
+      </Button>
       <Button variant="destructive">+ compare</Button>
     </div>
   );

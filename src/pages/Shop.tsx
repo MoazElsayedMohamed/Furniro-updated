@@ -44,7 +44,6 @@ const Shop = () => {
         endPage={endPage}
         pageSize={pageSize}
       />
-      <Work />
     </>
   );
 };

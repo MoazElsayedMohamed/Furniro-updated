@@ -20,7 +20,7 @@ const ProductData: React.FC<DetailsProps> = ({ product }) => {
       </p>
       <Size />
       <Colors />
-      <CountAndCompare />
+      <CountAndCompare product={product} />
     </div>
   );
 };

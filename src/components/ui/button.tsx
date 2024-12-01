@@ -23,7 +23,7 @@ const buttonVariants = cva(
           "border border-gray-200 rounded-md w-1/2 py-4 px-1 justify-between max-sm:text-sm",
         ghost:
           "bg-primary text-white md:text-xl font-normal py-4 outline-none cursor-pointer",
-        link: "text-primary underline-offset-4 hover:underline",
+        link: "border border-black py-1.5 px-8 rounded-full text-xs font-normal",
       },
       size: {
         default: "",

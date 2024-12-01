@@ -7,6 +7,8 @@ const HomePage = lazy(() => import("./pages/HomePage"));
 const Login = lazy(() => import("./pages/Login"));
 const Shop = lazy(() => import("./pages/Shop"));
 const SingleProduct = lazy(() => import("./pages/SingleProduct"));
+const Cart = lazy(() => import("./pages/Cart"));
+const Checkout = lazy(() => import("./pages/Checkout"));
 
 function App() {
   const router = createBrowserRouter([
@@ -26,7 +28,15 @@ function App() {
           path: "shop",
           element: <Shop />,
         },
-        { path: "/product/:id", element: <SingleProduct /> },
+        {
+          path: "/product/:id",
+          element: <SingleProduct />,
+        },
+        {
+          path: "cart",
+          element: <Cart />,
+        },
+        { path: "checkout", element: <Checkout /> },
       ],
     },
   ]);

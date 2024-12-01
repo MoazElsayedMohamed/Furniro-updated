@@ -36,10 +36,10 @@ const Sidebar: React.FC<NavbarProps> = ({ openMenu, setOpenMenu }) => {
           Home
         </Link>
         <Link to="#" className=" px-6 py-2 hover:text-primary text-lg">
-          About
+          Shop
         </Link>
         <Link to="#" className=" px-6 py-2 hover:text-primary text-lg">
-          Services
+          About
         </Link>
         <Link to="#" className=" px-6 py-2 hover:text-primary text-lg">
           Contact
@@ -49,7 +49,7 @@ const Sidebar: React.FC<NavbarProps> = ({ openMenu, setOpenMenu }) => {
           onClick={() => setOpenMenu(false)}
           className=" px-6 py-2 flex items-center gap-2 "
         >
-          <SvgIcon name="login" className="w-5 h-4" />
+          <SvgIcon name="login" className="w-5 h-4" onClick={undefined} />
           <h2 className="hover:text-primary text-lg">Login</h2>
         </Link>
         <Link
@@ -57,7 +57,7 @@ const Sidebar: React.FC<NavbarProps> = ({ openMenu, setOpenMenu }) => {
           onClick={() => setOpenMenu(false)}
           className=" px-6 py-2 flex items-center gap-2 "
         >
-          <SvgIcon name="search" className="w-5 h-4" />
+          <SvgIcon name="search" className="w-5 h-4" onClick={undefined} />
           <h2 className="hover:text-primary text-lg">Search</h2>
         </Link>
         <Link
@@ -65,7 +65,7 @@ const Sidebar: React.FC<NavbarProps> = ({ openMenu, setOpenMenu }) => {
           onClick={() => setOpenMenu(false)}
           className=" px-6 py-2 flex items-center gap-2 "
         >
-          <SvgIcon name="like" className="w-5 h-4" />
+          <SvgIcon name="like" className="w-5 h-4" onClick={undefined} />
           <h2 className="hover:text-primary text-lg">Like</h2>
         </Link>
         <Link
@@ -73,7 +73,11 @@ const Sidebar: React.FC<NavbarProps> = ({ openMenu, setOpenMenu }) => {
           onClick={() => setOpenMenu(false)}
           className=" px-6 py-2 flex items-center gap-2 "
         >
-          <SvgIcon name="shopping-cart" className="w-6 h-5" />
+          <SvgIcon
+            name="shopping-cart"
+            className="w-6 h-5"
+            onClick={undefined}
+          />
           <h2 className="hover:text-primary text-lg">Shopping Cart</h2>
         </Link>
       </nav>

@@ -8,11 +8,11 @@ const SingleProductHeader: React.FC<DetailsProps> = ({ product }) => {
         <h1 className="font-normal text-gray-200 capitalize max-sm:text-sm">
           home
         </h1>
-        <SvgIcon name="right-arrow" className="w-4 h-4" />
+        <SvgIcon name="right-arrow" className="w-4 h-4" onClick={undefined} />
         <h2 className="font-normal text-gray-200 capitalize max-sm:text-sm">
           shop
         </h2>
-        <SvgIcon name="right-arrow" className="w-4 h-4" />
+        <SvgIcon name="right-arrow" className="w-4 h-4" onClick={undefined} />
         <h3 className="border-l-2 border-gray-200 pl-8 font-normal max-sm:text-sm">
           {product?.attributes.name}
         </h3>

@@ -13,6 +13,7 @@ export interface DetailsProps {
           long_desc: string;
           sku: string;
           content: string;
+          count: number;
           image: {
             data: {
               attributes: {

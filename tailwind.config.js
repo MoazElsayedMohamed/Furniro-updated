@@ -18,6 +18,9 @@ export default {
       animation: {
         "spin-slow": "spin 3s linear infinite",
       },
+      gridTemplateColumns: {
+        double: "2fr 1fr",
+      },
       container: {
         center: true,
         screens: {
